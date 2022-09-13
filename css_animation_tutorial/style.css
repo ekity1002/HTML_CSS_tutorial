@@ -1,0 +1,161 @@
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: 0.5s;
+  animation-direction: normal;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ふわっと効果
+ */
+.fadeUp {
+  animation-name: fadeUpAnime; /*定義名*/
+  animation-duration: 1s; /*アニメ変化時間(デフォルト値を設定)*/
+  animation-fill-mode: forwards; /*開始と終了*/
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px); /*初期位置を指定*/
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================ アニメーション設定*/
+/* アニメーション設定*/
+.change-time05 {
+  animation-duration: 0.5s;
+}
+
+.change-time1 {
+  animation-duration: 1s;
+}
+
+.change-time15 {
+  animation-duration: 1.5s;
+}
+
+/* ===============*/
+/*動きを遅らせるcss*/
+.delay-time05 {
+  animation-delay: 0.5s;
+}
+
+.delay-time1 {
+  animation-delay: 1s;
+}
+
+.delay-time15 {
+  animation-delay: 1.5s;
+}
+
+/* ===============*/
+/*ループさせるcss*/
+.count2 {
+  /* すうちぶんだけ　アニメをループ */
+  animation-iteration-count: 2; 
+}
+
+.countInfinite {
+  /* 無限ループ。。。 */
+  animation-iteration-count: infinite;
+}
+
+
+/* ===============*/
+/*  アニメーション進行具合を操作する css*/
+.timing-ease {
+  animation-timing-function: ease;
+}
+
+.timing-ease-in {
+  animation-timing-function: ease-in;
+}
+
+.timing-ease-out {
+  animation-timing-function: ease-out;
+}
+
+.timing-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.timing-linear {
+  animation-timing-function: linear;
+}
+
+.timing-steps {
+  /* うごきを10コマに分けて表現 */
+  animation-timing-function: steps(10, end);
+}
+
+.timing-cubic-bezier {
+  animation-timing-function: cubic-bezier(.17,.67,.67,.51);
+}
+
+
+/* ===============*/
+/*==================================================
+アニメーションをまとめて設定する
+===================================*/
+.fadeDown{
+  animation: fadeDownAnime 1s ease 1.5s forwards;
+  opacity: 0;
+}
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 画面が読み込まれたらパタッと要素が出現< */
+.flipLeft {
+  animation-name: flipLeftAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  perspective-origin: left center;
+  opacity: 0;
+}
+
+@keyframes flipLeftAnimation {
+  from {
+    transform: perspective(600px) translate3d(0,0,0) rotateY(90deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(600px) translate3d(0,0,0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.fbox{
+  width: 220px;
+  padding: 20px;
+  margin:0 20px 20px 0;
+  background: #666;
+  color: #fff;
+  box-sizing:border-box;
+}
