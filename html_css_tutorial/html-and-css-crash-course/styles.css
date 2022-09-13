@@ -1,0 +1,189 @@
+body, ul, li, h1, h2, a {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+header {
+  background-color: rgb(235, 96, 96);
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  color: white;
+  border: 8px solid white;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 36px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  max-width : 100%;
+}
+
+.banner .welcome {
+  background-color: #FEB614;
+  color: white;
+  padding: 30px;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.banner h2 {
+ font-size: 22px; 
+}
+
+.banner h2 span {
+  font-size: 30px;
+}
+
+nav {
+  background-color: gainsboro;
+  padding: 20px;
+  position: sticky;
+  top: 103px;
+}
+
+nav ul {
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav li {
+  width: 25%;
+  display: inline-block;
+}
+
+nav li a {
+  text-decoration: none;
+  color: rgb(96, 98, 89);
+}
+
+nav li a.join {
+  color: #FEB614;
+}
+
+main {
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.images {
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+
+.images li {
+  display: inline-block;
+  width: 40%;
+  margin: 20px 4px;
+}
+
+.images li img {
+  max-width: 100%;
+}
+
+/* pseudo lasses */
+nav li a:hover {
+  text-decoration: underline;
+}
+
+.images li:hover {
+  position: relative;
+  top: -4px;
+}
+
+/* フォーカスが合った時、枠を dash に変更する. outlineはnoneにすると見やすい */
+form input:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
+/* inputのバリデーションが適切な値なら枠をgreenにする */
+form input:valid {
+  border: 4px solid green ;
+}
+
+nav li:first-child {
+  border: 3px solid orangered
+} 
+
+/* pseudo element  */
+article p::first-line{
+  font-weight: bold;
+}
+
+section.join p::first-letter {
+  font-size: 3em;
+}
+
+p::selection {
+  background-color: rosybrown;
+}
+
+/* h2::before {
+  content: 'TITLE HERE';
+  position: sticky;
+  top: 140px;
+  left: 0;
+} */
+p::after{
+  content: '...';
+}
+
+/* responsive styles */
+@media  screen and (max-width: 1400px) {
+
+}
+
+/* responsive styles */
+@media  screen and (max-width: 700px) {
+  .banner .welcome {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px;
+  }
+  /* brを消す */
+  .banner .welcome br{
+    display: none;
+  }
+
+  .images li {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  nav li {
+   width: 100%;
+   display: block;
+   margin: 5px;
+  }
+
+  header {
+    position: relative;
+  }
+  nav {
+    top: 0 
+  }
+
+}
