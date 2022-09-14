@@ -61,7 +61,27 @@ button{
 }
 
 /*// POP-UP ANIMATION STYLES //*/
+/* カンマで区切ると上手く動かないので注意 */
+#pop-up {
+  top: -400px;
+  transform-origin: 10px 10px;
+  /* キーフレーム名, duration, delay時間, forward/backなど, ease/ベジェなど,  */
+  animation: drop 0.5s ease forwards,
+             swing 2s 0.5s ease forwards;
+}
 
+@keyframes drop {
+  0% {opacity: 0;}
+  70% {transform: translateY(700px);}
+  100% {transform: translateY(650px); opacity: 1;}
+}
+
+@keyframes swing {
+  0% {transform: translateY(650%) rotateZ(0deg);}
+  40% {transform: translateY(650%) rotateZ(90deg);}
+  70% {transform: translateY(650%) rotateZ(70deg);}
+  100% {transform: translateY(650%) rotateZ(75deg);}
+}
 
 /*// BASKET BASE STYLES //*/
 
