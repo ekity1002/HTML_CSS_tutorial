@@ -1,0 +1,48 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+/* flexを使わずに白背景をつけるには以下を指定する方法もあるが、hack的方法. */
+/* .flex-container::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.box {
+    height: 100px;
+    /* width: 320px; */
+    /* min-width: 200px; */
+    flex-grow: 1;
+    flex-basis: 400px;
+    /* float: left */
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: blue;
+}
+
+.three {
+    background-color: green;
+}
