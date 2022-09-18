@@ -18,8 +18,8 @@ body{
     background-color: #fff;
     flex-wrap: wrap;
     flex-flow: column;
-    justify-content: flex-end;
     height: 800px;
+    justify-content: flex-end;
 }
 
 /* flexを使わずに白背景をつけるには以下を指定する方法もあるが、hack的方法. */
@@ -31,6 +31,7 @@ body{
 
 .box {
     height: 100px;
+    width: 100px;
     /* width: 320px; */
     /* min-width: 200px; */
     /* flex-grow: 1;
