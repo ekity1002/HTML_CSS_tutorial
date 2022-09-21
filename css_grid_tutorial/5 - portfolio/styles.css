@@ -29,12 +29,6 @@ main {
   padding: 30px 60px;  
 }
 
-/*welcome panel */
-.panel.welcome {
-  background: #323230;
-  padding: 30px 60px;
-  grid-auto-rows: 1fr;
-}
 .panel.welcome nav a {
   color: #a8a8a8;
   text-decoration: none;
@@ -56,27 +50,7 @@ main {
   align-self : end; /* footer を rowの一番下に持っていく */
 }
 
-.panel.welcome nav a {
-  color: #a8a8a8;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.panel.welcome p {
-  color: #a8a8a8;
-  line-height: 2em;
-  max-width: 540px;
-}
-
-.panel.welcome h1 {
-  color: #eeeee7;
-  font-size: 3em;
-}
-
-.panel.welcome footer {
-  align-self : end; /* footer を rowの一番下に持っていく */
-}
-/* about panel */
+/* about about */
 .panel.about {
   grid-template-rows: 3fr 1fr;
   overflow: hidden;
