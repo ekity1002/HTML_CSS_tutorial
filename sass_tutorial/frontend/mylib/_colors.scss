@@ -10,27 +10,29 @@
         background-color: $val;
     }
 
-    // light variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-light-#{$i} {
-            // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
-            color: mix(white, $val, $i*10);
+    @if($val != black and $val != white){
+        // light variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
+                color: mix(white, $val, $i*10);
+            }
+            .bg-#{$key}-light-#{$i} {
+                // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
+                background-color: mix(white, $val, $i*10);
+            }
         }
-        .bg-#{$key}-light-#{$i} {
-            // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
-            background-color: mix(white, $val, $i*10);
-        }
-    }
 
-    // dark variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-dark-#{$i} {
-            // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
-            color: mix(black, $val, $i*10);
-        }
-        .bg-#{$key}-dark-#{$i} {
-            // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
-            background-color: mix(black, $val, $i*10);
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
+                color: mix(black, $val, $i*10);
+            }
+            .bg-#{$key}-dark-#{$i} {
+                // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
+                background-color: mix(black, $val, $i*10);
+            }
         }
     }
 }
