@@ -4,6 +4,32 @@ $secondary: #1ac888;
 $error: #d32752;
 $info: #f8c305;
 
+//color palette
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "error": $error,
+    "info": $info,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "orange": #ffa600,
+    "purple": #9900ff,
+    "gray": #808080,
+    "black": black,
+    "white": white,
+);
+
+.test-btn {
+    background-color: map-get($colors, 'red');
+}
+
+// @debug map-get($colors, "purple" ); // 値を取得
+// @debug map-has-key($colors, "blue"); // キーを持つか
+// @debug map-remove($colors, "primary"); // キーの削除
+// @debug map-merge($colors, ("pink": #ffc0cb)); // 辞書のマージ
+
 $base-padding: 0.75rem;
 $base-margin: 0.75rem;
 
