@@ -1,0 +1,28 @@
+@use 'variables';
+@use 'sass:math';
+
+.card {
+    display: block;
+    padding: variables.$base-padding;
+    border: variables.$base-border-thickness solid #ddd;
+    box-shadow: variables.$base-box-shadow;
+    margin: variables.$base-margin;
+    padding: variables.$base-padding;
+
+    border-radius: math.div(variables.$base-border-radius, 4);
+    .card-title {
+        font-size: variables.$font-size-lg;
+        padding-bottom: variables.$base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: variables.$base-font-size;
+        // cardくらすすの card-body の a の指定
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+@debug math.floor(2.7);
