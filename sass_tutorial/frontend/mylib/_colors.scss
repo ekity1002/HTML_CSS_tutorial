@@ -6,6 +6,7 @@
     .text-#{$key} {
         color: $val;
     }
+
     .bg-#{$key} {
         background-color: $val;
     }
@@ -21,6 +22,12 @@
                 // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
                 background-color: mix(white, $val, $i*10);
             }
+            .text-hover-#{$key}-light-#{$i} {
+                &:hover {
+                    color: mix(white, $val, $i*10);
+                }
+            }
+        
         }
 
         // dark variations
@@ -32,6 +39,11 @@
             .bg-#{$key}-dark-#{$i} {
                 // 2色を混ぜて中間色を返す関数. 第三引数には、第一引数の色の重みを指定
                 background-color: mix(black, $val, $i*10);
+            }
+            .text-hover-#{$key}-dark-#{$i} {
+                &:hover {
+                    color: mix(black, $val, $i*10);
+                }
             }
         }
     }
