@@ -1,0 +1,12 @@
+// variables & functions
+// import の順番が大事。最初にvariable をインポートすると_base でも変数が見える
+@use 'variables';
+
+// base & layout
+@use 'base';
+
+// colors
+
+// components(buttons, card, navbar)
+
+// utilities (mamrgin, padding, opacity)
