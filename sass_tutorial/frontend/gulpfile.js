@@ -4,7 +4,7 @@ const sass = require('gulp-sass')(require('sass'))
 
 function buildStyles() {
   // index.scssをもとにして、cssをビルドする
-  return src('index.scss')
+  return src('*.scss')
   // sassコンパイル実行
     .pipe(sass())
     // cssフォルダー以下に保存
@@ -13,7 +13,7 @@ function buildStyles() {
 
 function watchTask() {
   // index.scss の変更をwatchして buildStyleを実行する関数
-  watch(['index.scss'], buildStyles)
+  watch(['*.scss'], buildStyles)
 }
 
 // gulp コマンドで実行する関数の設定. build, watchが起動する
