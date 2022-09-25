@@ -1,5 +1,5 @@
 @use  'variables';
-@import 'functions';
+@use 'functions';
 
 @mixin btn($bg-color: #e2e2e2) {
     // mixin: 共通なスタイルを定義して使い回せる. 引数を渡して動的に値を設定もできる
@@ -35,10 +35,10 @@
     }
     .btn-complement-#{$key} {
         @include btn($val);
-        color: light-comp($val);
+        color: functions.light-comp($val);
         &:hover {
             color: $val;
-            background-color: light-comp($val);
+            background-color: functions.light-comp($val);
         }
     }
 
