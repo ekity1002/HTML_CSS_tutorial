@@ -1,0 +1,35 @@
+@use 'variables';
+
+@mixin btn($bg-color: #e2e2e2) {
+    // mixin: 共通なスタイルを定義して使い回せる. 引数を渡して動的に値を設定もできる
+    // デフォルト値も指定可能.
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: variables.$base-padding variables.$base-padding * 2;
+    border-radius: variables.$base-border-radius;
+    background-color: $bg-color;
+}
+
+.btn {
+    // デフフォルト色を使う
+    @include btn; 
+
+}
+
+@each $key, $val in variables.$colors {
+    .btn-#{$key} {
+        @include btn($val);
+        &:hover {
+            background-color: lighten($val, 5);
+        }
+    }
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        &:hover {
+            background-color: $val;
+        }
+        border: variables.$base-border-thickness solid $val;
+    }
+}
