@@ -1,0 +1,32 @@
+
+@use "variables" as v;
+
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar {
+    @extend %flex-layout;
+    padding: v.$base-padding;
+    box-shadow: v.$base-box-shadow;
+
+    .site-title {
+        font-size: v.$font-size-lg;
+    }
+
+    .container {
+        @extend %flex-layout;
+    }
+}
+
+// 色付けしたnavbarクラスを生成. extendを利用
+@each $key, $val in v.$colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+}
