@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="img/logo.svg" alt="logo">
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="about">About</a></li>
+        <li><a href="works">Works</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="https://www.instagram.com/"><img src="img/icon-instagram.png" alt="icon-instagram"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="mainvisual">
+      <picture>
+        <source media="(min-width: 600px)" srcset="img/mainvisual-pc.jpg">
+        <img src="img/mainvisual-sp.jpg">
+      </picture>
+    </div>
+
+    <div id="about" class="wrapper">
+      <h2>About</h2>
+      <p>Xxxxx Ashley <br><br><br>
+        2th Floor xxxxx Building x-x-x Nishiazabu, <br>
+        Minato-ku, Tokyo 106-0031 Japan<br>
+        tel: 000-0000-0000<br>
+        url: www.xxxxxx.jp<br>
+        mail: xxx@xxxxxx.jp<br><br>
+        プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+    </div>
+    <div id="works" class="wrapper">
+      <h2>Works</h2>
+      <ul>
+        <li><img src="img/works1.jpg" alt="work1"></li>
+        <li><img src="img/works2.jpg" alt="work2"></li>
+        <li><img src="img/works3.jpg" alt="work3"></li>
+        <li><img src="img/works4.jpg" alt="work4"></li>
+        <li><img src="img/works5.jpg" alt="work5"></li>
+        <li><img src="img/works6.jpg" alt="work6"></li>
+      </ul>
+    </div>
+    <div id="news" class="wrapper">
+      <h2>News</h2>
+      <dl>
+        <dt>2020.XX.XX</dt>
+        <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました</dd>
+        <dt>2020.XX.XX</dt>
+        <dd>ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
+        <dt>2019.XX.XX</dt>
+        <dd>【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+        <dt>2019.XX.XX</dt>
+        <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</dd>
+        <dt>2019.XX.XX</dt>
+        <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+      </dl>
+    </div>
+    <div id="contact" class="wrapper">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <dl>
+          <dt><label for="name">NAME</label></dt>
+          <dd><input type="text" id="name" name="name"></dd>
+          <dt><label for="email">E-mail</label></dt>
+          <dd><input type="email" id="email" name="email"></dd>
+          <dt><label for="message">MESSAGE</label></dt>
+          <dd><textarea id="message" name="message"></textarea></dd>
+        </dl>
+        <div class="btn">
+          <input type="submit" value="送信">
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>© 2020 My Work</p>
+  </footer>
+</body>
+</html>
