@@ -1,0 +1,168 @@
+body {
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.open nav {
+  left: 0;
+  opacity: 1;
+  color: black;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:first-child {
+  transform: translateY(4px) rotate(-45deg);
+}
+.open .toggle_btn span:last-child {
+  transform: translateY(-4px) rotate(45deg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+header h1 {
+  font-size: 1.2rem;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  color: #fff;
+  width: 300px;
+  padding: 36px 30px;
+  z-index: 20;
+  opacity: 1;
+  transition: all 0.5s;
+}
+header nav ul li {
+  padding-bottom: 20px;
+}
+header nav ul li a {
+  color: #fff;
+}
+header .toggle_btn {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  transition: all 0.5s;
+  z-index: 20;
+}
+header .toggle_btn span {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+header .toggle_btn span:first-child {
+  top: 10px;
+}
+header .toggle_btn span:last-child {
+  bottom: 10px;
+}
+header #mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+main {
+  padding-top: 80px;
+  margin-bottom: 100px;
+}
+main #top ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+}
+main #top ul li {
+  max-width: 48%;
+  font-size: 0.7rem;
+  padding-bottom: 30px;
+}
+main P a {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+}
+
+footer ul {
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+footer ul li {
+  padding-right: 30px;
+  font-size: 0.75rem;
+}
+footer ul li a {
+  color: black;
+}
+footer p {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 900px) {
+  main #top ul li {
+    max-width: 23%;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  footer ul li {
+    padding-right: 30px;
+    font-size: 0.75rem;
+  }
+  footer ul li a {
+    color: black;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

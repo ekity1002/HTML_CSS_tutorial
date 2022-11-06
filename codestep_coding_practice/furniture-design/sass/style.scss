@@ -1,0 +1,204 @@
+$max-width: 1360px;
+$about-max-width: 600px;
+$company-max-width: 600px;
+$details-max-width: 800px;
+$breakpoint: 900px;
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.open {
+  // ハンバーガー用 openされたとき
+  nav {
+    left:0;
+    opacity: 1;
+    color: black;
+  }
+  #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .toggle_btn{
+    span{
+      background-color: #fff;
+      &:first-child{
+        // xにするために、1本目の線を-45度回転
+        -webkit-transform: translateY(4px) rotate(-45deg);
+        transform: translateY(4px) rotate(-45deg);
+      }
+      &:last-child{
+        // xにするために、2本目の線を45度回転
+        -webkit-transform: translateY(-4px) rotate(45deg);
+        transform: translateY(-4px) rotate(45deg);
+      }
+    }
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fff;
+
+  width: 100%;
+  height: 80px;
+
+  position: fixed;  // 画面の一番上に常に表示されるようにする
+  left: 0;
+  top:0;
+  right: 0;
+  z-index: 10;
+
+  h1 {
+    font-size: 1.2rem;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: -300px; // 画面外に隠しておく
+    color: #fff;
+    width: 300px;
+    padding: 36px 30px;
+    z-index: 20;
+    opacity: 1;
+    transition: all 0.5s;
+    ul {
+      li {
+        padding-bottom: 20px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .toggle_btn {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    transition: all 0.5s;
+    z-index: 20; //他の要素より手前に出してハンバーガーでもクリックできるようにする
+
+    span {
+      // ハンバーガーメニューの線
+      display: block; // 高さ指定できるように block要素にする
+      background-color: black; // 線を出す
+      position: absolute; // toggle_btnの divからの相対位置を指定する
+      height: 2px; // 高さを出して線を出す
+      width: 30px;
+      border-radius: 4px;
+      transition: all 0.5s;
+      &:first-child {
+        top: 10px;
+      }
+      &:last-child {
+        bottom: 10px;
+      }
+    }
+  }
+
+  #mask{
+    // ハンバーガ背景用
+    display: none;
+    transition: all 0.5s;
+  }
+}
+
+main {
+  padding-top: 80px; // header の文の高さを指定して、上の画像が隠れないように
+  margin-bottom: 100px;
+  #top {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0;
+        li {
+          max-width: 48%;
+          font-size: 0.7rem;
+          padding-bottom: 30px;
+        }
+    }
+  }
+  P {
+    a {
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+      color: black;
+    }
+  }
+}
+
+footer {
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; // 左詰め
+    li {
+      padding-right: 30px;
+      font-size: 0.75rem;
+      a {
+        color: black;
+      }
+    }
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  main {
+    #top {
+      ul {
+          li {
+            max-width: 23%;
+          }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: flex-start; // 左詰め
+      li {
+        padding-right: 30px;
+        font-size: 0.75rem;
+        a {
+          color: black;
+        }
+      }
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }}
