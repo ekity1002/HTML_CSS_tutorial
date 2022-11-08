@@ -1,0 +1,482 @@
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.open .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  left: 0;
+  opacity: 1;
+  z-index: 20;
+  transition: 0.5s;
+}
+.open .mask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.open .hamburger {
+  z-index: 20;
+}
+.open .hamburger span {
+  background-color: #fff;
+}
+.open .hamburger span:first-child {
+  transform: translateY(12px) rotate(-315deg);
+}
+.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.open .hamburger span:last-child {
+  transform: translateY(-12px) rotate(315deg);
+}
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+header img {
+  max-width: 200px;
+  height: 100px;
+}
+header .hamburger span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+}
+header .mask {
+  display: none;
+  transition: all 0.5s;
+}
+header .menu {
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: -500px;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: -10;
+  opacity: 0;
+  transition: 0.5s;
+}
+header .menu .services li {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+header .menu .sns li {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+
+main #video {
+  height: 80vh;
+  width: 100%;
+}
+main #video video {
+  position: fixed;
+  top: 100px;
+  z-index: -20;
+}
+main #project {
+  margin-bottom: 80px;
+}
+main #project h1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+main #project h1::before {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #project h1::after {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #project ul {
+  padding: 0;
+}
+main #project ul li {
+  position: relative;
+  margin-bottom: 30px;
+}
+main #project ul li p {
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 4px;
+}
+main #feature {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+}
+main #feature h1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+main #feature h1::before {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #feature h1::after {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #feature ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+main #feature ul li {
+  width: 30%;
+  text-align: center;
+}
+main #feature ul li a {
+  width: 100%;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  padding: calc(50% - 11px) 0;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+main #feature ul li a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: -100%;
+  opacity: 0.3;
+  transition: 0.5s;
+}
+main #feature ul li a:hover::before {
+  left: 0;
+}
+main #flow {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+main #flow .wrapper > p {
+  margin: 20px 0;
+}
+main #flow h1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+main #flow h1::before {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #flow h1::after {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #flow .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+main #flow .step ol {
+  position: relative;
+  padding: 0;
+}
+main #flow .step ol::before {
+  content: "";
+  width: 50px;
+  height: 720px;
+  background-color: #ffdd00;
+  position: absolute;
+  top: 0;
+  left: 125px;
+}
+main #flow .step ol li {
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  background-color: #414141;
+  font-size: 0.875rem;
+  margin-bottom: 80px;
+  position: relative;
+}
+main #flow .step ol li::before {
+  content: "";
+  border-top: 40px solid #414141;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+main #flow .step dl {
+  margin-left: 50px;
+}
+main #flow .step dl dt {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+}
+main #flow .step dl dt span {
+  display: block;
+  color: #fff;
+  background-color: #414141;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -45px;
+}
+main #flow .step dl dd {
+  margin-bottom: 50px;
+}
+main #flow .step dl dd:last-child {
+  margin-bottom: 0;
+}
+main #contact {
+  padding-top: 50px;
+  background-color: #fff;
+  margin-bottom: 80px;
+}
+main #contact h2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+main #contact h2::before {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #contact h2::after {
+  content: "";
+  border-top: 1px solid;
+  width: 18%;
+}
+main #contact p {
+  text-align: center;
+}
+main #contact .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main #contact .list a {
+  width: 60%;
+  text-align: center;
+  display: block;
+  border: solid 1px black;
+  font-size: 0.775rem;
+  position: relative;
+  padding: 50px 0;
+  margin-bottom: 10px;
+}
+main #contact .list a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-top: solid 20px transparent;
+  border-right: solid 20px;
+  right: 0;
+  bottom: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+main #contact .list a:hover {
+  outline: solid 3px #121212;
+}
+main #contact .list a img {
+  display: inline-block;
+}
+
+footer {
+  background-color: black;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 20px;
+  margin-bottom: 40px;
+}
+footer ul li {
+  padding: 0 20px;
+  border-right: solid 2px #fff;
+}
+footer ul li:last-child {
+  border-right: none;
+}
+footer p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+footer #to-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #121212;
+  color: #ffffff;
+  border: solid 1px #fff;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+footer #to-top::after {
+  content: "";
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: relative;
+  left: 33%;
+  bottom: 10%;
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    margin-left: 300px;
+  }
+  .open .mask {
+    display: none;
+  }
+  .open .menu {
+    transition: unset;
+  }
+  header {
+    height: 100%;
+    width: 300px;
+    padding: 0 10px;
+    display: block;
+  }
+  header .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    position: relative;
+    top: 10%;
+    left: 0px;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    opacity: 1;
+    z-index: 0;
+    transition: 0s;
+  }
+  header .hamburger {
+    display: none;
+  }
+  header mask {
+    display: none;
+  }
+  main #video {
+    width: 100%;
+    height: 100vh;
+  }
+  main #project {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    margin-bottom: 0;
+    padding-bottom: 40px;
+  }
+  main #project h1 {
+    color: #fff;
+  }
+  main #project ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  main #project ul li {
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  main #feature {
+    margin-bottom: 0;
+  }
+  main #flow p {
+    text-align: center;
+  }
+  main #flow .step {
+    flex-direction: row;
+  }
+  main #flow .step dt {
+    margin-left: 20px;
+  }
+  main #contact .list {
+    flex-direction: row;
+  }
+  main #contact .list a {
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

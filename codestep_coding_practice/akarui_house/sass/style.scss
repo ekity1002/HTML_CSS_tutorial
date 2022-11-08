@@ -1,0 +1,516 @@
+$breakpoint: 960px;
+
+@mixin title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+    &::before {
+      content: '';
+      border-top: 1px solid;
+      width: 18%;
+    }
+    &::after {
+      content: '';
+      border-top: 1px solid;
+      width: 18%;
+    }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.open {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+
+    left:0;
+    opacity: 1;
+    z-index: 20;
+    transition: 0.5s;
+
+  }
+  .mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .hamburger{
+    z-index: 20;
+    span {
+      background-color: #fff;
+      &:first-child{
+        transform: translateY(12px) rotate(-315deg);
+      }
+      &:nth-child(2)  {
+        opacity: 0;
+      }
+      &:last-child{
+        transform: translateY(-12px) rotate(315deg);
+      }
+    }
+  }
+}
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+  img {
+    max-width: 200px;
+    height: 100px;
+  }
+
+  .hamburger {
+    span {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: black;
+      margin-bottom: 10px;
+      transition: all 0.5s;
+    }
+  }
+
+  .mask {
+    display: none;
+    transition: all 0.5s;
+  }
+
+  .menu {
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: white;
+    z-index: -10;
+    opacity: 0;
+    // TODO: ブラウザ->スマホに画面が切り替わるとき、ハンバーガー用のアニメーションさせないようにする
+    transition: 0.5s;
+
+    .services {
+      li {
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+      }
+    }
+
+    .sns {
+
+      li {
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+main {
+  #video {
+    height: 80vh;
+    width: 100%;
+    video {
+      position: fixed;
+      top: 100px;
+      z-index: -20;
+    }
+  }
+
+  #project {
+    margin-bottom: 80px;
+    h1 {
+      @include title;
+    }
+    ul {
+      padding: 0;
+      li {
+        position: relative;
+        margin-bottom: 30px;
+        p {
+          color: white;
+          position: absolute;
+          bottom: 5px;
+          left: 4px;
+        }
+      }
+    }
+  }
+
+  #feature {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    h1  {
+      @include title;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      li  {
+        width: 30%;
+        text-align: center;
+        a{
+          width: 100%;
+          border: solid 1px #fff;
+          border-radius: 50%;
+          color: #fff;
+          display: block;
+          padding: calc(50% - 11px) 0;
+          margin-bottom: 15px;
+          text-align: center;
+          position: relative;
+          overflow: hidden; //はみ出た部分を隠すようにする
+
+          &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: -100%;
+            opacity: 0.3;
+            transition: 0.5s;
+          }
+          &:hover{
+            &::before{
+              left:0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #flow {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    .wrapper  > p {
+      margin: 20px 0;
+    }
+
+    h1 {
+      @include title;
+    }
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+
+      ol {
+        position: relative;
+        padding: 0;
+
+        &::before{
+          content: "";
+          width: 50px;
+          height: 720px;
+          background-color: #ffdd00;
+          position: absolute;
+          top: 0;
+          left: 125px;
+        }
+        li {
+          width: 300px;
+          height:80px;
+          line-height: 80px;
+          text-align: center;
+          color: #fff;
+          background-color: #414141;
+
+          font-size: 0.875rem;
+          margin-bottom: 80px;
+          position: relative; //こうすると、absolueノ要素より手前に来る
+          &::before {
+            content: '';
+            border-top: 40px solid #414141;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+        }
+      }
+     }
+
+     dl {
+      margin-left: 50px;
+      dt {
+        position: relative;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px;
+        span {
+          display: block;
+
+          color: #fff;
+          background-color: #414141;
+          text-align: center;
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: -45px;
+        }
+      }
+      dd {
+        margin-bottom: 50px;
+        &:last-child  {
+          margin-bottom: 0;
+        }
+      }
+     }
+  }
+  }
+
+  #contact {
+    padding-top: 50px;
+    background-color: #fff;
+    margin-bottom: 80px;
+    h2 {
+      @include title;
+    }
+    p {
+      text-align: center;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 10px;
+        a {
+          width: 60%;
+          text-align: center;
+          display: block;
+          border: solid 1px black;
+          font-size: .775rem;
+          position: relative;
+
+          padding: 50px 0;
+          margin-bottom: 10px;
+
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            // background-color: #414141;
+            position: absolute;
+            border-top: solid 20px transparent;
+            border-right: solid 20px;
+            right: 0;
+            bottom: 0;
+            margin-right: 5px;
+            margin-bottom: 5px;
+          }
+
+          &:hover {
+            outline: solid 3px #121212;
+          }
+
+          img  {
+            display: inline-block; //これがないと マージンができてしまう。。
+          }
+        }
+      }
+  }
+}
+
+footer {
+  background-color: black;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 0  20px;
+      border-right: solid 2px #fff;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  p  {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  #to-top {
+    // 上に戻るボタン
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #121212;
+    color: #ffffff;
+    border: solid 1px #fff;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    visibility: hidden;
+    transition: opacity 1s;
+
+    &::after{
+      // 中の三角を作成
+      content: '';
+      border-bottom: 7px solid #fff;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      position: relative;
+      left: 33%;
+      bottom: 10%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint){
+  // ブラウザ
+  .container  {
+    margin-left: 300px;
+  }
+  // これがないと、ハンバーガーメニュー開いた状態で
+  // ブラウザ広げたとき黒背景がでっぱなしになる
+  .open {
+    .mask {
+      display: none;
+    }
+    .menu {
+      transition: unset;
+    }
+  }
+
+  header {
+    height: 100%;
+    width: 300px;
+    padding: 0 10px;
+    display: block;
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: flex-start;
+      position: relative;
+      top: 10%;
+      left: 0px;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      opacity: 1;
+      z-index: 0;
+      transition: 0s;
+
+    }
+    .hamburger {
+      display: none;
+    }
+    mask {
+      display: none;
+    }
+  }
+
+  main  {
+    #video {
+      width: 100%;
+      height: 100vh;
+    }
+
+    #project {
+      background:  linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8));
+      h1 {
+        color: #fff;
+      }
+      margin-bottom: 0;
+      padding-bottom: 40px;
+
+      ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+          width: 47%;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    #feature  {
+      margin-bottom: 0;
+    }
+
+    #flow {
+      p {
+        text-align: center;
+      }
+      .step {
+        flex-direction: row;
+        dt  {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    #contact {
+      .list {
+        flex-direction: row;
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
