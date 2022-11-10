@@ -120,8 +120,9 @@ header {
     background-color: white;
     z-index: -10;
     opacity: 0;
-    // TODO: ブラウザ->スマホに画面が切り替わるとき、ハンバーガー用のアニメーションさせないようにする
-    transition: 0.5s;
+    // TODO: ブラウザ->スマホに画面が切り替わるとき、ハンバーガー用のアニメーションさせないように
+    // XXX: コメントアウトすると、ハンバーガを閉じたときのアニメーションがなくなってしまうが、妥協策。。。
+    // transition: 0.5s;
 
     .services {
       li {
@@ -455,7 +456,7 @@ footer {
     .hamburger {
       display: none;
     }
-    mask {
+    .mask {
       display: none;
     }
   }

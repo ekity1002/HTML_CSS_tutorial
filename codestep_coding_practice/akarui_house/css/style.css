@@ -90,7 +90,6 @@ header .menu {
   background-color: white;
   z-index: -10;
   opacity: 0;
-  transition: 0.5s;
 }
 header .menu .services li {
   font-size: 1.2rem;
@@ -434,7 +433,7 @@ footer #to-top::after {
   header .hamburger {
     display: none;
   }
-  header mask {
+  header .mask {
     display: none;
   }
   main #video {
