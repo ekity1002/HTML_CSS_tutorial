@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script src="main.js"></script>
   <title>Sneakers</title>
@@ -43,17 +48,19 @@
     </section>
     <section id="pickup">
       <h1>PICK UP</h1>
-      <ul>
-        <li><img src="img/pickup1.jpg" alt=""></li>
-        <li><img src="img/pickup2.jpg" alt=""></li>
-        <li><img src="img/pickup3.jpg" alt=""></li>
-        <li><img src="img/pickup4.jpg" alt=""></li>
-        <li><img src="img/pickup5.jpg" alt=""></li>
-        <li><img src="img/pickup6.jpg" alt=""></li>
-        <li><img src="img/pickup7.jpg" alt=""></li>
-        <li><img src="img/pickup8.jpg" alt=""></li>
-        <li><img src="img/pickup9.jpg" alt=""></li>
-      </ul>
+      <div class="swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide"><img src="img/pickup1.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup2.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup3.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup4.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup5.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup6.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup7.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup8.jpg" alt=""></li>
+          <li class="swiper-slide"><img src="img/pickup9.jpg" alt=""></li>
+        </ul>
+      </div>
     </section>
     <section id="feature">
       <h1>FEATURE</h1>
@@ -149,28 +156,28 @@
             テキストテキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
         </div>
-      </div>
-      <div class="forms">
-        <form action="#">
-          <ul>
-            <li>
-              <p>Name:</p>
-              <input type="text" name="name" value="" />
-            </li>
-            <li>
-              <p>Mail:</p>
-              <input type="email" name="email" value="" />
-            </li>
-            <li>
-              <p>Message:</p>
-              <textarea name="message"></textarea>
-            </li>
-          </ul>
+        <div class="forms">
+          <form action="#">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="" />
+              </li>
+              <li>
+                <label for="email">Mail:</label>
+                <input type="email" id="email" name="email" value="" />
+              </li>
+              <li>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+              </li>
+            </ul>
 
-          <div class="button">
-            <input type="submit" vlaue="SEND">
-          </div>
-        </form>
+            <div class="button">
+              <input type="submit" value="SEND">
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
