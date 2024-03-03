@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* 擬似要素にも同様のプロパティを指定 */
+}
+
+body {
+    background-color: #F4F9FF
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    margin-left: 10px
+}
+header img {
+    width: 160px;
+    max-width: 100%;
+}
+
+
+
+.mainvisual {
+    margin-bottom: 60px;
+    padding: 0 10px
+}
+.mainvisual img {
+    max-width: 100%;
+}
+
+
+.index {
+    background-color: white;
+    padding: 30px 40px;
+    margin-bottom: 60px;
+}
+
+.index ol {
+    margin-left: 20px;
+}
+.index li {
+    margin-bottom: 20px;
+}
+.index li:last-child {
+    margin-bottom: 0;
+}
+
+.detail {
+    margin-bottom: 100px;
+}
+.detail__content img {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.detail__content__text dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    margin-bottom: 25px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+
+}
+
+.detail__content__text dt {
+    width: 25%
+}
+
+.detail__content__text dd {
+    width: 75%
+}
+
+.detail__content__text p {
+    margin-bottom: 20px;
+}
+
+.detail__content__text a {
+    color: #333
+}
+
+.detail__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+/* PC */
+@media screen and (min-width: 1024px) {
+
+    .detail__content {
+        display: flex;
+    }
+
+    .detail__content img {
+        width: 270px;
+        height: 270px;
+        margin-right: 50px;
+    }
+}
