@@ -1,2 +1,5 @@
 *.zip
-__MAXOSX
+__MACOSX
+*.jpg
+*.svg
+*.ico

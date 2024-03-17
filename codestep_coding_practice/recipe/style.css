@@ -1,0 +1,97 @@
+html {
+    font-family: "Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif";
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+/* .mainvisual {
+    width: 100%
+} */
+
+.mainvisual img {
+    height: 100vh; /* ブラウザウィンドウの高さの100%に設定 */
+    width: 100%;
+    object-fit: cover;
+    object-position: center, top;
+    margin-bottom: 80px
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.recipe h1 {
+    margin-bottom: 20px;
+}
+
+.recipe__text {
+    text-align: center;
+}
+
+.images {
+    margin-bottom: 80px;
+}
+
+.images ul {
+    display: flex;
+}
+
+.images img {
+    width: 33vw;
+    height: 500px;
+    object-fit: cover;
+}
+
+.link {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.link a {
+    text-decoration: none;
+    padding: 20px 60px;
+    border: 1px solid black;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer li {
+    margin-right: 10px;
+}
+
+footer li:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 834px) {
+    .images ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .images img {
+        width: 100vw;
+        height: 500px;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+
+
+}

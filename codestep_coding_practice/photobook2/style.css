@@ -1,0 +1,166 @@
+* *::before *::after {
+      box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 0.98rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper {
+    margin: 0 20px;
+}
+
+
+header {
+    padding: 60px 0 10px 10px;
+}
+
+header img {
+    width: 180px;
+}
+
+.mainvisual img {
+    margin-bottom: 50px;
+    max-width: 100%
+}
+
+/* index */
+.index {
+    margin: 0 auto 60px;
+    padding-bottom: 30px;
+    background-color: #F5F5F5;
+    max-width: 800px
+}
+
+.index ol {
+    padding: 20px 50px;
+    margin: 0 20px;
+    border: 1px solid black
+}
+.index li {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.index li:last-child {
+    margin-bottom: 0;
+}
+
+/* photos */
+.photos {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photos img {
+    max-width: 100%;
+}
+
+/* detail */
+.detail {
+    margin: 0 auto 50px;
+    max-width: 800px;
+    background-color: #F5F5F5;
+    padding-bottom: 30px;
+}
+
+.detail__text {
+    font-size: 0.9rem;
+    padding: 0 20px
+}
+.detail__text__info ul {
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.detail__text__info li {
+    margin-bottom: 10px;
+}
+
+.detail__text__info li:last-child {
+    margin-bottom: 30px;
+}
+
+.detail__text__link > p {
+    margin-bottom: 20px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        margin: 0 auto;
+        width: 1024px;
+    }
+
+    header {
+        margin: 0 auto;
+        width: 1024px;
+        padding: 60px 0 10px;
+    }
+
+    .mainvisual {
+        margin: 0 auto;
+        width: 1024px
+    }
+    .mainvisual img {
+        width: 1024px
+    }
+
+    .photos {
+        width: 1024px;
+        padding: 0 130px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .photos img {
+        width: 49%;
+        margin-bottom: 20px;
+    }
+
+    .detail__text {
+        display: flex;
+        justify-content: space-between;
+    }
+    .detail__text__info {
+        width: 50%;
+        margin: 0 30px;
+    }
+    .detail__text__info ul {
+        border-right: 1px solid black;
+        border-bottom: none;
+        margin: 0 50px 30px;
+    }
+
+    .detail__text__info p {
+        padding-left: 50px;
+    }
+
+
+}
